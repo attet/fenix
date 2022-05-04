@@ -114,7 +114,7 @@ class Components(private val context: Context) {
 
     val addonsProvider by lazyMonitored {
         // Check if we have a customized (overridden) AMO collection (supported in Nightly & Beta)
-        if (FeatureFlags.customExtensionCollectionFeature && context.settings().amoCollectionOverrideConfigured()) {
+        if (/*FeatureFlags.customExtensionCollectionFeature &&*/ context.settings().amoCollectionOverrideConfigured()) {
             AMOAddonsProvider(
                 context,
                 core.client,
